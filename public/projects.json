@@ -1,0 +1,77 @@
+[
+  {
+    "id": "1",
+    "titre": "PoC Crous Bordeaux",
+    "mots_cles": ["Symfony", "Tailwind", "Python", "MariaDB"],
+    "description_breve": "Proof Of Concept d'un outil de suivi des biodéchets pour le Crous de Bordeaux.",
+    "images": ["crous_accueil.png", "crous_connexion.png", "crous_graphe.png", "crous_incident.png", "crous_panelAdmin.png"],
+"informations": "Dans le cadre de ma formation, j’ai participé à un projet innovant de deux semaines en collaboration avec un véritable client : le Crous de Bordeaux. L’objectif était de répondre à une problématique concrète rencontrée par les restaurants universitaires : la gestion et l’analyse des déchets alimentaires.\n\nLes prestataires chargés de la collecte des déchets fournissaient des rapports indiquant le poids des déchets, mais chacun utilisait un format différent. Le Crous devait alors traiter ces données avec d’anciens tableaux Excel, rendant l’analyse complexe et limitant l’exploitation des informations.\n\nPour répondre à ce besoin, nous avons conçu et développé un site web permettant de centraliser, unifier et valoriser ces données. Parmi les fonctionnalités clés, notre solution propose :\n\n - Une carte interactive des restaurants universitaires\n - Une comparaison des données hebdomadaires (semaine en cours vs. semaine précédente)\n - La possibilité de signaler des incidents\n - L’affichage d’alertes en cas de valeurs aberrantes\n - L’automatisation du scraping et de la récupération des données. \n\nCôté stack technologique, nous avons opté pour Symfony (+bundle EasyAdmin) avec MariaDB pour le backend, Tailwind CSS pour le frontend, et Python (BeautifulSoup, Selenium) pour le scraping des données. L’automatisation repose sur des scripts exécutés via des CRON jobs sur un serveur VPS, où la solution a été déployée.\n\nTout au long du projet, nous avons collaboré étroitement avec le client, affinant les exigences au fil des échanges pour aboutir à un produit fonctionnel et opérationnel.",
+    "equipe": "5",
+    "date" : "01-2025"
+  },
+  {
+    "id": "2",
+    "titre": "Pokedex 3D",
+    "mots_cles": ["React", "Express", "Tailwind", "MongoDB"],
+    "description_breve": "Site affichant des informations sur les pokemons de la GEN 1 ainsi que leur modèle 3D.",
+    "images": ["pokedex_displayPokemon.png", "pokedex_allPokemons.png", "pokedex_teamType.png", "pokedex_signup_in.png", "pokedex_adminPage.png", "pokedex_filter.png", "pokedex_searchBar.png"],
+    "informations": "Nous avons eu 1 semaines pour réaliser ce site en méthode agile. Nous avons utilisé React pour le front, Express pour le back et MongoDB pour la base de données. Je me suis principalement occupé des 2 cadres (statistiques et informations) sur la page de visualisation d'un pokémon, de la partie modification des données sur la page admin et de mettre en place la majeure partie des endpoints de l'API. ",
+    "equipe": "5",
+    "date" : "12-2024"
+  },
+  {
+    "id": "3",
+    "titre": "Guiblix",
+    "mots_cles": ["Symfony", "SQL", "Html", "Css", "Js"],
+    "description_breve": "Site inspiré d'IMDb dans lequel les utilisateurs peuvent noter et commenter des films.",
+    "images": ["guiblix_home.png", "guiblix_register.png", "guiblix_series.png"],
+    "informations": "Le projet consiste à développer une plateforme similaire à IMDb, dédiée aux séries télévisées. On peut commenter, critiquer, liker, chercher, marquer comme vu un grand nombre de séries. Un formulaire de connexion / inscription permet aux utilisateurs d'avoir un compte et d'accéder à certaines fonctionnalités. Ce projet a été réalisé en 2 semaines par une équipe de 6 personnes en utilisant la méthode Scrum.",
+    "equipe": "6",
+    "date" : "01-2024"
+  },
+  {
+    "id": "4",
+    "titre": "Pandemic  ",
+    "mots_cles": ["Python", "Kivy", "OracleDB"],
+    "description_breve": "Implémenter le jeu de société Pandemic sous forme d'application python.",
+    "images": ["pandemic.jpeg"],
+    "informations": "Nous avons eu 2 semaines et l'obligation d'utiliser la méthode scrum pour réaliser ce projet. Les sprints étaient de 3 jours et un enseignant jouait le rôle du client, devant lequel on faisait notre démo. Pour le côté technique nous avons utilisé python, le framework Kivy pour le front et OracleDB pour la base de données. Je me suis principalement occupé d'implémenter les règles côté backend et de m'assurer que la mise en place de la méthode scrum était respectée (Backlog, Plannification, Sprint, démo).",
+    "equipe": "7",
+    "date" : "09-2024",
+    "sansImage": true
+  },
+   {
+    "id": "5",
+    "titre": "Reconnaissance de chiffres manuscrits",
+    "mots_cles": ["Python"],
+    "description_breve": "Introduction apprentissage supervisé et traitement d'images",
+    "images": ["matrice_confusion.png"],
+    "informations": "Dans ce projet, j'ai développé un système de reconnaissance de chiffres manuscrits basé sur l'algorithme des k-plus proches voisins (k-NN). L'objectif est d'identifier un chiffre manuscrit à partir d'images issues du dataset MNIST (https://en.wikipedia.org/wiki/MNIST_database).\n\n Méthode:\n\n - Prétraitement des images : redimensionnement, conversion en niveaux de gris, binarisation, érosion et dilatation pour réduire le bruit \n - Extraction de caractéristiques (Zoning) : division de l’image en 25 blocs, puis comptage du nombre de pixel noir \n - Classification avec k-NN : calcul des distances entre les vecteurs de caractéristiques de mes images et ceux de la base d’apprentissage pour k=3. Ensuite on attribue le label majoritaire parmi les plus proches voisins.\n\nLe modèle atteint un taux de reconnaissance de 91%, avec des confusions observées notamment entre certains chiffres visuellement proches (1/7, 8/9).",
+    "equipe": "1",
+    "date" : "10-2024",
+    "fichiers": ["Rapport_analyse_image_LASSERRE_Joris.pdf"],
+    "sansImage": true
+  },
+  {
+    "id": "6",
+    "titre": "Pacman 3D",
+    "mots_cles": ["C#", "Unity"],
+    "description_breve": "Découverte d'Unity en réalisant un jeu de Pacman en 3D.",
+    "images": ["pacman1.png", "pacman2.png", "pacman3.png"],
+    "informations": "Ce projet d'une semaine m'a fait découvrir les bases d'unity. Chaque niveau est chargé à partir d'un labyrinthe au format json et le modélise en 3D. Des fantomes mortels se déplacent dans celui-ci, et nous pouvons contrôler le pacman avec les touches \"ZQSD\". Pour gagner, trouver la sortie ou récupérer toutes les pièces sans mourir.",
+    "equipe": "1",
+    "date" : "01-2024"
+  },
+  {
+    "id": "7",
+    "titre": "Projet 7",
+    "mots_cles": ["Python", "Selenium"],
+    "description_breve": "Description du projet 7",
+    "images": ["a-min.jpg", "a-min.jpg", "a-min.jpg"],
+    "informations": "Détails plus approfondis sur le projet 2.",
+    "equipe": "3",
+    "date" : "08-2024"
+  }
+  
+  
+]
