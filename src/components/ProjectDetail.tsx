@@ -62,11 +62,12 @@ const ProjectDetail: React.FC = () => {
       {!project.sansImage && (
         <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
           {project.images.map((image, index) => (
-            <img
+             <img
               key={index}
               src={`/${image}`}
               alt={project.titre}
-              className="w-full h-64 object-cover rounded-lg shadow-md cursor-pointer"
+              className="w-full h-64 object-contain rounded-lg shadow-md cursor-pointer"
+
               onClick={() => setSelectedImage(`/${image}`)}
             />
           ))}
@@ -75,31 +76,66 @@ const ProjectDetail: React.FC = () => {
 
       {selectedImage && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-75 flex justify-center items-center z-50"
+          className="fixed inset-0 flex justify-center items-center z-50"
           onClick={() => setSelectedImage(null)}
         >
-          <img src={selectedImage} alt="Agrandissement" className="max-w-3xl max-h-[80vh] rounded-lg shadow-lg" />
+          <div className="absolute inset-0 bg-black opacity-75"></div>
+          <img
+            src={selectedImage}
+            alt="Agrandissement"
+            className="relative max-w-full max-h-[80vh] rounded-lg shadow-lg"
+          />
         </div>
       )}
 
-      {/* Section fichiers */}
       {project.fichiers && project.fichiers.length > 0 && (
-        <div className="mt-6">
-          <h2 className="text-2xl font-bold text-gray-900">Fichiers</h2>
-          <ul className="mt-2 text-blue-600">
-            {project.fichiers.map((fichier, index) => (
-              <li key={index}>
-                <a href={`/${fichier}`} download className="hover:underline">{fichier}</a>
-              </li>
-            ))}
-          </ul>
-          {project.fichiers[0].endsWith(".pdf") && (
-            <div className="mt-4 w-full">
-              <embed src={`/${project.fichiers[0]}`} type="application/pdf" className="w-full h-[600px]" />
-            </div>
-          )}
-        </div>
-      )}
+  <div className="mt-6">
+    <h2 className="text-2xl font-bold text-gray-900">Fichiers</h2>
+    <ul className="mt-2 text-blue-600">
+      {project.fichiers.map((fichier, index) => {
+        const isYoutube = fichier.includes("youtube.com") || fichier.includes("youtu.be");
+
+        return (
+          <li key={index}>
+            {isYoutube ? (
+              <a href={fichier} target="_blank" rel="noopener noreferrer" className="hover:underline">
+                {fichier}
+              </a>
+            ) : (
+              <a href={`/${fichier}`} download className="hover:underline">{fichier}</a>
+            )}
+          </li>
+        );
+      })}
+    </ul>
+
+    {project.fichiers[0].endsWith(".pdf") && (
+      <div className="mt-4 w-full">
+        <embed src={`/${project.fichiers[0]}`} type="application/pdf" className="w-full h-[600px]" />
+      </div>
+    )}
+
+    {project.fichiers.map((fichier, index) => {
+      if (fichier.includes("youtube.com") || fichier.includes("youtu.be")) {
+        const videoId = fichier.includes("youtube.com")
+          ? new URL(fichier).searchParams.get("v")
+          : fichier.split("/").pop();
+
+        return (
+          <div key={index} className="mt-4 w-full aspect-video">
+            <iframe
+              className="w-full h-full rounded-lg shadow-lg"
+              src={`https://www.youtube.com/embed/${videoId}`}
+              title="YouTube video"
+              allowFullScreen
+            />
+          </div>
+        );
+      }
+      return null;
+    })}
+  </div>
+)}
     </div>
   );
 };
