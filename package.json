@@ -9,10 +9,7 @@
     "build": "vite build",
     "check": "tsc --noEmit && npm run lint",
     "lint": "eslint .",
-    "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
-    "postinstall": "chmod +x node_modules/.bin/gh-pages"
+    "preview": "vite preview"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
