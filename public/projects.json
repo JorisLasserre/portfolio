@@ -76,7 +76,7 @@
     "informations": "CV vidéo que j'ai réalisé dans le cadre du cours de communication et de ma recherche de stage. Inspiré de la websérie Bref de Kyan Khojandi. Je remercie Aurore Menn pour son aide durant le tournage et Maxence Mingasson pour ses talents de monteur.",
     "equipe": "3",
     "date" : "11-2024",
-    "fichiers": ["https://www.youtube.com/watch?v=b_JZDxGoxvg"]
+    "fichiers": ["https://www.youtube.com/watch?v=b_JZDxGoxv"]
   },
   {
     "id": "8",
@@ -85,7 +85,7 @@
     "description_breve": "Application d'aide à la décision écologique",
     "miniature":"ordinat_r.png",
     "images": [ "ordinat_r_schema.png", "ordinat_r_gantt.png"],
-    "informations": "Ce logiciel d'aide à la décision a été développé en C# pour l'interface graphique, il utilise aussi du python pour la partie calculatoire et du SQL pour la gestion de la base de donnée. En s'appuyant sur des indicateurs statistiques tels que la moyenne ou les droites de régression ce logiciel permet de comparer divers facteurs tels que les émissions de Co2 ou le volume de déchets par pays. Nous avons aussi créer un installateur en bash qui permet de déployer automatiquement la base ainsi que de la remplir. Nous avons réalisé tout cela sur 2 semaines en respectant une méthodologie de type cycle en V.",
+    "informations": "Ce logiciel d'aide à la décision a été développé en C# pour l'interface graphique, il utilise aussi du python pour la partie calculatoire et du SQL pour la gestion de la base de donnée. En s'appuyant sur des indicateurs statistiques tels que la moyenne ou les droites de régression ce logiciel permet de comparer divers facteurs tels que les émissions de Co2 ou le volume de déchets par pays. Nous avons aussi créer un installateur en bash qui permet de déployer automatiquement la base ainsi que de la remplir. Nous avons réalisé tout cela sur 2 semaines en respectant une méthodologie de type cycle en V. Je me suis occupé avec l'aide d'un camarade de la partie gestion de projet en plus du développement. ",
     "equipe": "5",
     "date" : "06-2023"
   },

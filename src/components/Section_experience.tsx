@@ -38,7 +38,7 @@ const Experience: React.FC = () => {
     {projects.slice(0, showAll ? projects.length : 6).map((project) => (
       <Card key={project.id} className="w-full max-w-[48rem] flex-row" placeholder="" onPointerEnterCapture={() => {}} onPointerLeaveCapture={() => {}}>
         <CardHeader shadow={false} floated={false} className="m-0 w-2/5 shrink-0 rounded-r-none" placeholder="" onPointerEnterCapture={() => {}} onPointerLeaveCapture={() => {}}>
-          <img src={project.miniature} alt={project.titre} className="h-full w-full object-cover" />
+          <img src={project.miniature} loading="lazy" alt={project.titre} className="h-full w-full object-cover" />
         </CardHeader>
         <CardBody placeholder="" onPointerEnterCapture={() => {}} onPointerLeaveCapture={() => {}}>
           <Typography variant="h4" color="blue-gray" className="mb-2" placeholder="" onPointerEnterCapture={() => {}} onPointerLeaveCapture={() => {}}>

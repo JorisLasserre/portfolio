@@ -92,11 +92,11 @@ const ProjectDetail: React.FC = () => {
     <h2 className="text-2xl font-bold text-gray-900">Fichiers</h2>
     <ul className="mt-2 text-blue-600">
       {project.fichiers.map((fichier, index) => {
-        const isYoutube = fichier.includes("youtube.com") || fichier.includes("youtu.be");
+        const isALink = fichier.includes("https") || fichier.includes("http");
 
         return (
           <li key={index}>
-            {isYoutube ? (
+            {isALink ? (
               <a href={fichier} target="_blank" rel="noopener noreferrer" className="hover:underline">
                 {fichier}
               </a>
