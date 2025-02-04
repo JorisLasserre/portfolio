@@ -9,7 +9,6 @@ interface Project {
   date: string;
   equipe: number;
   informations: string;
-  sansImage?: boolean;
   images: string[];
   fichiers?: string[];
 }
@@ -59,7 +58,7 @@ const ProjectDetail: React.FC = () => {
         <p key={index} className="mt-2 text-gray-700">{paragraph}</p>
       ))}
 
-      {!project.sansImage && (
+      {(
         <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
           {project.images.map((image, index) => (
              <img
