@@ -82,7 +82,7 @@
     "id": "8",
     "titre": "Ordinat'R",
     "mots_cles": ["C#", "Windows Form", "SQL", "Python"],
-    "description_breve": "Application d'aide à la décision écologique",
+    "description_breve": "Application d'aide à la décision des émissions de CO2 par pays en lien avec les .",
     "miniature":"ordinat_r.png",
     "images": [ "ordinat_r_schema.png", "ordinat_r_gantt.png"],
     "informations": "Ce logiciel d'aide à la décision a été développé en C# pour l'interface graphique, il utilise aussi du python pour la partie calculatoire et du SQL pour la gestion de la base de donnée. En s'appuyant sur des indicateurs statistiques tels que la moyenne ou les droites de régression ce logiciel permet de comparer divers facteurs tels que les émissions de Co2 ou le volume de déchets par pays. Nous avons aussi créer un installateur en bash qui permet de déployer automatiquement la base ainsi que de la remplir. Nous avons réalisé tout cela sur 2 semaines en respectant une méthodologie de type cycle en V. Je me suis occupé avec l'aide d'un camarade de la partie gestion de projet en plus du développement. ",
@@ -96,7 +96,7 @@
     "description_breve": "Ma première application en React, avec formulaire de connexion",
     "miniature":"react_miniature.png",
     "images": [ "react_firstapp_game.png", "react_firstapp_login.png", "react_firstapp_top.png"],
-    "informations": "J'ai mis en place deux petits jeux dont les règles sont très faciles. Il existe une interface de connexion qui permet d'accéder au jeu si l'utilisateur est identifié, sinon une notification apparaît pour lui proposer de s'inscrire. Il existe un classment des 10 joueurs les plus victorieux, ainsi qu'une option pour se déconnecter. J'ai utilisé JsonServer en tant que base de données. ",
+    "informations": "J'ai mis en place deux petits jeux dont les règles sont très simples. Il existe une interface de connexion qui permet d'accéder au jeu si l'utilisateur est identifié, sinon une notification apparaît pour lui proposer de s'inscrire. Il existe un classment des 10 joueurs les plus victorieux, ainsi qu'une option pour se déconnecter. J'ai utilisé JsonServer en tant que base de données. ",
     "equipe": "1",
     "date" : "03-2023"
   }

@@ -18,7 +18,7 @@ const Home: React.FC = () => {
             <div className="mt-6 flex flex-wrap gap-4 sm:gap-10 justify-center relative z-20">
                 <a href="#experience"><Button placeholder="">Expérience</Button></a>
                 <a href="#about"><Button placeholder="">À propos</Button></a>
-                <a href="#contact"><Button placeholder="">Contact</Button></a>
+                <a href="#contact"><Button placeholder="">Me contacter</Button></a>
             </div>
         </section>
     );
