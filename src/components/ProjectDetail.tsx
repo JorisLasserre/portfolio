@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 interface Project {
@@ -42,7 +42,22 @@ const ProjectDetail: React.FC = () => {
   }
 
   return (
+    
     <div className="p-6 max-w-4xl w-full mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
+     <Link
+        to="/"
+        className="fixed top-4 right-4 bg-[#101829] text-white p-3 rounded-full shadow-lg transition-transform transform hover:scale-105"
+        aria-label="Accueil"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          className="w-6 h-6"
+        >
+          <path d="M10.5 21.75v-6a1.5 1.5 0 011.5-1.5h.002a1.5 1.5 0 011.498 1.5v6a.75.75 0 00.75.75h4.5a.75.75 0 00.75-.75V13.5h1.5a.75.75 0 00.494-1.32l-9-8a.75.75 0 00-.988 0l-9 8A.75.75 0 003 13.5h1.5V21a.75.75 0 00.75.75h4.5a.75.75 0 00.75-.75z" />
+        </svg>
+      </Link>
       <h1 className="text-3xl font-bold text-gray-900">{project.titre}</h1>
       <p className="mt-4 text-gray-700 text-lg">{project.description_breve}</p>
       <div className="mt-2 flex flex-wrap gap-2">
@@ -65,7 +80,7 @@ const ProjectDetail: React.FC = () => {
               key={index}
               src={`/${image}`}
               alt={project.titre}
-              className="w-full h-64 object-contain rounded-lg shadow-md cursor-pointer"
+              className="w-full h-64 object-contain rounded-lg  cursor-pointer"
 
               onClick={() => setSelectedImage(`/${image}`)}
             />
@@ -89,7 +104,7 @@ const ProjectDetail: React.FC = () => {
 
       {project.fichiers && project.fichiers.length > 0 && (
   <div className="mt-6">
-    <h2 className="text-2xl font-bold text-gray-900">Fichiers</h2>
+    <h2 className="text-2xl font-bold text-gray-900">Fichiers / Liens</h2>
     <ul className="mt-2 text-blue-600">
       {project.fichiers.map((fichier, index) => {
         const isALink = fichier.includes("https") || fichier.includes("http");
