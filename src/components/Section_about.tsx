@@ -12,7 +12,7 @@ const About: React.FC = () => {
         <img 
           src="a-min.jpg" 
           alt="Moi" 
-          className="w-96 h-96 sm:w-104 sm:h-104 object-cover shadow-lg md:mr-12 rounded-t-4xl rounded-b-4xl" 
+          className="w-96 h-96 sm:w-128 sm:h-128 object-cover shadow-lg md:mr-8 rounded-t-4xl rounded-b-4xl" 
          
         />
 

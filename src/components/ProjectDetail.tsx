@@ -1,5 +1,6 @@
 import { Link, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet-async";
 
 interface Project {
   id: string;
@@ -44,6 +45,10 @@ const ProjectDetail: React.FC = () => {
   return (
     
     <div className="p-6 max-w-4xl w-full mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
+    <Helmet>
+        <title>{project.titre} -  Lasserre Joris</title>
+        <meta name="description" content={project.description_breve} />
+    </Helmet>
      <Link
         to="/"
         className="fixed top-4 right-4 bg-[#101829] text-white p-3 rounded-full shadow-lg transition-transform transform hover:scale-105"

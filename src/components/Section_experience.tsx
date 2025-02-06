@@ -34,28 +34,31 @@ const Experience: React.FC = () => {
         Vous trouverez ici différents projets que j'ai réalisés
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-12 px-4 md:px-16 py-6">
-        {projects.slice(0, showAll ? projects.length : 6).map((project) => (
-          <Link 
-            to={`/project/${project.id}`} 
-            key={project.id} 
-            className="max-w-sm rounded-lg overflow-hidden shadow-lg bg-white flex flex-col h-full transform transition duration-300 hover:scale-95"
-          >
-            <img className="w-full h-64 object-cover" src={project.miniature} alt={project.titre} />
-            <div className="px-6 py-4 flex-grow">
-              <h3 className="font-bold text-xl mb-2">{project.titre}</h3>
-              <p className="text-gray-700 text-base">
-                {project.description_breve}
-              </p>
-            </div>
-            <div className="px-6 pt-4 pb-2">
-              {project.mots_cles.map((mot) => (
-                <span key={mot} className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                  #{mot}
-                </span>
-              ))}
-            </div>
-          </Link>
-        ))}
+        {projects
+            .sort((a, b) => parseInt(b.id) - parseInt(a.id)) 
+            .slice(0, showAll ? projects.length : 6) 
+            .map((project) => (
+            <Link
+              to={`/project/${project.id}`}
+              key={project.id}
+              className="max-w-sm rounded-lg overflow-hidden shadow-lg bg-white flex flex-col h-full transform transition duration-300 hover:scale-95"
+            >
+              <img className="w-full h-64 object-cover" src={project.miniature} alt={project.titre} />
+              <div className="px-6 py-4 flex-grow">
+                <h3 className="font-bold text-xl mb-2">{project.titre}</h3>
+                <p className="text-gray-700 text-base">
+                  {project.description_breve}
+                </p>
+              </div>
+              <div className="px-6 pt-4 pb-2">
+                {project.mots_cles.map((mot) => (
+                  <span key={mot} className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+                    #{mot}
+                  </span>
+                ))}
+              </div>
+            </Link>
+          ))}
       </div>
 
       <div className="w-full flex justify-center mt-6">
