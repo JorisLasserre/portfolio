@@ -67,7 +67,7 @@ const Home: React.FC = () => {
         // 🔵 Version A
         <>
           <img
-            src="a-min.jpg"
+            src="a-min.webp"
             alt="Profile"
             className="w-32 h-32 sm:w-40 sm:h-40 object-cover rounded-full border-4 bg-[#171717] shadow-lg relative z-10"
           />
@@ -81,7 +81,7 @@ const Home: React.FC = () => {
         // 🔴 Version B
         <>
           <img
-            src="logo_jl.jpg"
+            src="logo_jl.webp"
             alt="Profile"
             className="w-32 h-32 sm:w-40 sm:h-40 object-cover rounded-full shadow-lg relative z-10"
           />
