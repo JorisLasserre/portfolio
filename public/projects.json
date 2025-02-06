@@ -1,15 +1,14 @@
 [
   {
     "id": "1",
-    "titre": "Théorie de l'information, wordgame et entropie",
-    "mots_cles": ["Python", "Math"],
-    "description_breve": "Rapport sur les applications de la théorie de l'information de Claude E. Shannon",
-    "miniature": "miniature_theorie_info.webp",
-    "images": [],
-    "informations": "Mise en application de concepts mathématiques dans des problématiques concrètes en informatique. En plus de la rédaction de ce rapport, nous avons réalisé en python plusieurs algorithmes tels que la compression de données de Huffman, les codes correcteurs d'erreurs de Hamming, le chiffrement affine et le protocole d'échange de clé de Diffie-Hellman. Nous avons aussi réalisé un wordle (semblable au jeu motus) en python et un moyen de le résoudre en un minimum de coups grâce à la notion d'entropie.",
-    "equipe": "2",
-    "date": "05-2024",
-    "fichiers": ["Theorie_information.pdf"]
+    "titre": "Mini-jeux en React",
+    "mots_cles": ["React", "JsonServer"],
+    "description_breve": "Ma première application en React, avec formulaire de connexion et base de donnée json server",
+    "miniature": "miniature_react_firstapp.webp",
+    "images": ["react_firstapp_game.webp", "react_firstapp_login.webp", "react_firstapp_top.webp"],
+    "informations": "J'ai mis en place deux petits jeux dont les règles sont très simples. Il existe une interface de connexion qui permet d'accéder au jeu si l'utilisateur est identifié, sinon une notification apparaît pour lui proposer de s'inscrire. Il existe un classment des 10 joueurs les plus victorieux, ainsi qu'une option pour se déconnecter. J'ai utilisé JsonServer en tant que base de données.",
+    "equipe": "1",
+    "date": "03-2023"
   },
   {
     "id": "2",
@@ -22,30 +21,21 @@
     "equipe": "2",
     "date": "02-2024"
   },
+
   {
     "id": "3",
-    "titre": "Mini-jeux en React",
-    "mots_cles": ["React", "JsonServer"],
-    "description_breve": "Ma première application en React, avec formulaire de connexion",
-    "miniature": "miniature_react_firstapp.webp",
-    "images": ["react_firstapp_game.webp", "react_firstapp_login.webp", "react_firstapp_top.webp"],
-    "informations": "J'ai mis en place deux petits jeux dont les règles sont très simples. Il existe une interface de connexion qui permet d'accéder au jeu si l'utilisateur est identifié, sinon une notification apparaît pour lui proposer de s'inscrire. Il existe un classment des 10 joueurs les plus victorieux, ainsi qu'une option pour se déconnecter. J'ai utilisé JsonServer en tant que base de données.",
-    "equipe": "1",
-    "date": "03-2023"
+    "titre": "Théorie de l'information, wordgame et entropie",
+    "mots_cles": ["Python", "Math"],
+    "description_breve": "Rapport sur les applications de la théorie de l'information de Claude E. Shannon",
+    "miniature": "miniature_theorie_info.webp",
+    "images": [],
+    "informations": "Mise en application de concepts mathématiques dans des problématiques concrètes en informatique. En plus de la rédaction de ce rapport, nous avons réalisé en python plusieurs algorithmes tels que la compression de données de Huffman, les codes correcteurs d'erreurs de Hamming, le chiffrement affine et le protocole d'échange de clé de Diffie-Hellman. Nous avons aussi réalisé un wordle (semblable au jeu motus) en python et un moyen de le résoudre en un minimum de coups grâce à la notion d'entropie.",
+    "equipe": "2",
+    "date": "05-2024",
+    "fichiers": ["Theorie_information.pdf"]
   },
   {
     "id": "4",
-    "titre": "Ordinat'R",
-    "mots_cles": ["C#", "Windows Form", "SQL", "Python"],
-    "description_breve": "Application de visualisation des émissions de CO2 par pays en lien avec les déchets électroniques.",
-    "miniature": "miniature_ordinatr.webp",
-    "images": ["ordinat_r_schema.webp", "ordinat_r_gantt.webp"],
-    "informations": "Ce logiciel d'aide à la décision a été développé en C# pour l'interface graphique, il utilise aussi du python pour la partie calculatoire et du SQL pour la gestion de la base de donnée. En s'appuyant sur des indicateurs statistiques tels que la moyenne ou les droites de régression ce logiciel permet de comparer divers facteurs tels que les émissions de Co2 ou le volume de déchets par pays. Nous avons aussi créer un installateur en bash qui permet de déployer automatiquement la base ainsi que de la remplir. Nous avons réalisé tout cela sur 2 semaines en respectant une méthodologie de type cycle en V. Je me suis occupé avec l'aide d'un camarade de la partie gestion de projet en plus du développement.",
-    "equipe": "5",
-    "date": "06-2023"
-  },
-  {
-    "id": "5",
     "titre": "Pacman 3D",
     "mots_cles": ["C#", "Unity"],
     "description_breve": "Découverte d'Unity en réalisant un jeu de Pacman en 3D.",
@@ -54,6 +44,17 @@
     "informations": "Ce projet d'une semaine m'a fait découvrir les bases d'unity. Chaque niveau est chargé à partir d'un labyrinthe au format json et le modélise en 3D. Des fantomes mortels se déplacent dans celui-ci, et nous pouvons contrôler le pacman avec les touches \"ZQSD\". Pour gagner, trouver la sortie ou récupérer toutes les pièces sans mourir.",
     "equipe": "1",
     "date": "01-2024"
+  },
+  {
+    "id": "5",
+    "titre": "Ordinat'R",
+    "mots_cles": ["C#", "Windows Form", "SQL", "Python"],
+    "description_breve": "Application de visualisation des émissions de CO2 par pays en lien avec les déchets électroniques.",
+    "miniature": "miniature_ordinatr.webp",
+    "images": ["ordinat_r_schema.webp", "ordinat_r_gantt.webp"],
+    "informations": "Ce logiciel d'aide à la décision a été développé en C# pour l'interface graphique, il utilise aussi du python pour la partie calculatoire et du SQL pour la gestion de la base de donnée. En s'appuyant sur des indicateurs statistiques tels que la moyenne ou les droites de régression ce logiciel permet de comparer divers facteurs tels que les émissions de Co2 ou le volume de déchets par pays. Nous avons aussi créer un installateur en bash qui permet de déployer automatiquement la base ainsi que de la remplir. Nous avons réalisé tout cela sur 2 semaines en respectant une méthodologie de type cycle en V. Je me suis occupé avec l'aide d'un camarade de la partie gestion de projet en plus du développement.",
+    "equipe": "5",
+    "date": "06-2023"
   },
   {
     "id": "6",
@@ -97,7 +98,7 @@
     "description_breve": "Site inspiré d'IMDb dans lequel les utilisateurs peuvent noter et commenter des films.",
     "miniature": "miniature_guiblix.webp",
     "images": ["guiblix_home.webp", "guiblix_register.webp", "guiblix_series.webp"],
-    "informations": "Le projet consiste à développer une plateforme similaire à IMDb, dédiée aux séries télévisées. On peut commenter, critiquer, liker, chercher, marquer comme vu un grand nombre de séries. Un formulaire de connexion / inscription permet aux utilisateurs d'avoir un compte et d'accéder à certaines fonctionnalités. Ce projet a été réalisé en 2 semaines par une équipe de 6 personnes en utilisant la méthode Scrum.",
+    "informations": "Ce projet a consisté à créer une plateforme inspirée d'IMDb, dédiée aux séries télévisées, permettant aux utilisateurs de noter, commenter, liker et marquer leurs séries comme vues. Le contenu est enrichi grâce à l'API IMDb, offrant un large catalogue de séries. \n\nLes fonctionnalités incluent :\n\n - Inscription et connexion des utilisateurs pour un accès sécurisé aux fonctionnalités de la plateforme.\n - Interface intuitive permettant de consulter des séries, de les noter, de laisser des critiques et d’interagir avec d’autres utilisateurs.\n - Gestion d’un tableau de bord personnel pour suivre les séries vues et préférées.\n - Recherche avancée pour explorer des séries par genre, note, ou année de sortie.\n\nRéalisé par une équipe de 6 personnes en 2 semaines, le développement a été structuré avec Symfony pour le backend, SQL pour la gestion des données, et HTML/CSS/JS pour l’interface frontend. La méthode Scrum a été utilisée pour une gestion agile et efficace du projet.",
     "equipe": "6",
     "date": "01-2024"
   },

@@ -54,10 +54,35 @@ const Home: React.FC = () => {
       className={`relative h-screen flex flex-col items-center justify-center px-4 bg-gray-100`}
     >
       <Helmet>
-        <title>Lasserre Joris - Portfolio 🖥️</title>
-        <meta name="description" content="Bienvenue sur mon portfolio. Découvrez mes projets et mes expériences." />
+        <title>Lasserre Joris - Développeur Full-stack - Portfolio :desktop:</title>
+        <meta
+            name="description"
+            content="Portfolio de Joris Lasserre, développeur Full-stack. Découvrez mes projets, mon expertise en développement et mes expériences professionnelles."
+        />
+        <meta name="keywords" content="Développeur Full-stack, Portfolio, Joris Lasserre, Développement web, React, Symfony, Java, C#, Bordeaux, Pays basque, développeur, ingénieur" />
+        
+        {/* Open Graph Meta Tags */}
+        <meta property="og:title" content="Lasserre Joris - Portfolio Développeur Full-stack :desktop:" />
+        <meta
+            property="og:description"
+            content="Portfolio de Joris Lasserre, développeur Full-stack. Explorez mes projets, compétences et expériences professionnelles."
+        />
+        <meta property="og:image" content="logo_jl.webp" />
+        <meta property="og:url" content="https://jorislasserre.netlify.app/" />
+        <meta property="og:type" content="website" />
+        
+        {/* Twitter Card Meta Tags */}
+        <meta name="twitter:title" content="Lasserre Joris - Portfolio Développeur Full-stack :desktop:" />
+        <meta
+            name="twitter:description"
+            content="Portfolio de Joris Lasserre, développeur Full-stack. Explorez mes projets et compétences en développement web."
+        />
+        <meta name="twitter:image" content="logo_jl.webp" />
+        <meta name="twitter:card" content="summary_large_image" />
+
         <link rel="icon" href="jl.png" type="image/jpeg" />
-      </Helmet>
+        </Helmet>
+
 
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none">
         <div className="border border-darkGreen opacity-20 rounded-full w-[70vw] h-[70vw] max-w-[650px] max-h-[650px] min-w-[300px] min-h-[300px]"></div>
