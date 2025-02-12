@@ -61,7 +61,6 @@ const Home: React.FC = () => {
         />
         <meta name="keywords" content="Développeur Full-stack, Portfolio, Joris Lasserre, Développement web, React, Symfony, Java, C#, Bordeaux, Pays basque, développeur, ingénieur" />
         
-        {/* Open Graph Meta Tags */}
         <meta property="og:title" content="Lasserre Joris - Portfolio Développeur Full-stack :desktop:" />
         <meta
             property="og:description"
@@ -71,7 +70,6 @@ const Home: React.FC = () => {
         <meta property="og:url" content="https://jorislasserre.netlify.app/" />
         <meta property="og:type" content="website" />
         
-        {/* Twitter Card Meta Tags */}
         <meta name="twitter:title" content="Lasserre Joris - Portfolio Développeur Full-stack :desktop:" />
         <meta
             name="twitter:description"
@@ -119,9 +117,9 @@ const Home: React.FC = () => {
       )}
 
       <div className="mt-6 flex flex-wrap gap-4 sm:gap-10 justify-center relative z-20">
-        <a href="#experience"><Button placeholder="">Expérience</Button></a>
-        <a href="#about"><Button placeholder="">À propos</Button></a>
-        <a href="#contact"><Button placeholder="">Me contacter</Button></a>
+        <a href="#experience"><Button className="bg-[#171717]  cursor-pointer" placeholder="">Expérience</Button></a>
+        <a href="#about"><Button className="bg-[#171717]  cursor-pointer" placeholder="">À propos</Button></a>
+        <a href="#contact"><Button className="bg-[#171717] cursor-pointer" placeholder="">Me contacter</Button></a>
       </div>
     </section>
   );

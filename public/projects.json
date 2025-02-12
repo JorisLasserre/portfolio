@@ -6,7 +6,7 @@
     "description_breve": "Ma première application en React, avec formulaire de connexion et base de donnée json server",
     "miniature": "miniature_react_firstapp.webp",
     "images": ["react_firstapp_game.webp", "react_firstapp_login.webp", "react_firstapp_top.webp"],
-    "informations": "J'ai mis en place deux petits jeux dont les règles sont très simples. Il existe une interface de connexion qui permet d'accéder au jeu si l'utilisateur est identifié, sinon une notification apparaît pour lui proposer de s'inscrire. Il existe un classment des 10 joueurs les plus victorieux, ainsi qu'une option pour se déconnecter. J'ai utilisé JsonServer en tant que base de données.",
+    "informations": "J'ai mis en place deux petits jeux dont les règles sont très simples. Il existe une interface de connexion qui permet d'accéder au jeu si l'utilisateur est identifié, sinon une notification apparaît pour lui proposer de s'inscrire. Il existe un classement des 10 joueurs les plus victorieux, ainsi qu'une option pour se déconnecter. J'ai utilisé JsonServer en tant que base de données.",
     "equipe": "1",
     "date": "03-2023"
   },
@@ -17,7 +17,7 @@
     "description_breve": "Application qui permet de créer et éditer des labyrinthes au format json.",
     "miniature": "miniature_labrynth_editor.webp",
     "images": ["labyrinthe_home.webp", "labyrinthe_new.webp", "labyrinthe_liste.webp", "labyrinthe_view.webp", "labyrinthe_edit_mode.webp"],
-    "informations": "Cette application mobile, développée en Java pour Android, permet de récupérer des labyrinthes hébergés sur un serveur distant, d'accéder à ceux stockés localement ou d'en créer de nouveaux. L'édition est possible en ajoutant des entrées, des sorties et en modifiant la structure du labyrinthe. Dans le fichier JSON, seules les coordonnées des chemins, des points d'arrivée et des salles sont enregistrées ; tout ce qui n'est pas spécifié est considéré comme un mur. Chaque type de case (chemin, salle, point d'arrivée, mur) est associé à une texture spécifique.",
+    "informations": "Cette application mobile, développée en Java pour Android, permet de récupérer des labyrinthes hébergés sur un serveur distant, d’accéder à ceux stockés localement ou d’en créer de nouveaux. L’édition est possible en ajoutant des entrées, des sorties et en modifiant la structure du labyrinthe. Dans le fichier JSON, seules les coordonnées des chemins, des points d’arrivée et des salles sont enregistrées ; tout ce qui n’est pas spécifié est considéré comme un mur. Chaque type de case (chemin, salle, point d’arrivée, mur) est associé à une texture spécifique.",
     "equipe": "2",
     "date": "02-2024"
   },
@@ -29,7 +29,7 @@
     "description_breve": "Rapport sur les applications de la théorie de l'information de Claude E. Shannon",
     "miniature": "miniature_theorie_info.webp",
     "images": [],
-    "informations": "Mise en application de concepts mathématiques dans des problématiques concrètes en informatique. En plus de la rédaction de ce rapport, nous avons réalisé en python plusieurs algorithmes tels que la compression de données de Huffman, les codes correcteurs d'erreurs de Hamming, le chiffrement affine et le protocole d'échange de clé de Diffie-Hellman. Nous avons aussi réalisé un wordle (semblable au jeu motus) en python et un moyen de le résoudre en un minimum de coups grâce à la notion d'entropie.",
+    "informations": "Mise en application de concepts mathématiques dans des problématiques concrètes en informatique. En plus de la rédaction de ce rapport, nous avons réalisé en Python plusieurs algorithmes, tels que : \n \n - La compression de données de Huffman, \n \n - Les codes correcteurs d’erreurs de Hamming, \n \n - Le chiffrement affine, \n \n - Le protocole d’échange de clés de Diffie-Hellman. \n \nNous avons également développé un Wordle (semblable au jeu Motus) en Python, ainsi qu’un algorithme permettant de le résoudre en un minimum de coups grâce à la notion d’entropie.",
     "equipe": "2",
     "date": "05-2024",
     "fichiers": ["Theorie_information.pdf"]
@@ -41,7 +41,7 @@
     "description_breve": "Découverte d'Unity en réalisant un jeu de Pacman en 3D.",
     "miniature": "miniature_pacman3d.webp",
     "images": ["pacman1.webp", "pacman2.webp", "pacman3.webp"],
-    "informations": "Ce projet d'une semaine m'a fait découvrir les bases d'unity. Chaque niveau est chargé à partir d'un labyrinthe au format json et le modélise en 3D. Des fantomes mortels se déplacent dans celui-ci, et nous pouvons contrôler le pacman avec les touches \"ZQSD\". Pour gagner, trouver la sortie ou récupérer toutes les pièces sans mourir.",
+    "informations": "Ce projet d’une semaine m’a permis de découvrir les bases d’Unity. Chaque niveau est chargé à partir d’un labyrinthe au format JSON, puis modélisé en 3D. Des fantômes mortels se déplacent dans celui-ci, et nous pouvons contrôler Pac-Man avec les touches \"ZQSD\". Pour gagner, il faut trouver la sortie ou récupérer toutes les pièces sans mourir.",
     "equipe": "1",
     "date": "01-2024"
   },
@@ -52,7 +52,7 @@
     "description_breve": "Application de visualisation des émissions de CO2 par pays en lien avec les déchets électroniques.",
     "miniature": "miniature_ordinatr.webp",
     "images": ["ordinat_r_schema.webp", "ordinat_r_gantt.webp"],
-    "informations": "Ce logiciel d'aide à la décision a été développé en C# pour l'interface graphique, il utilise aussi du python pour la partie calculatoire et du SQL pour la gestion de la base de donnée. En s'appuyant sur des indicateurs statistiques tels que la moyenne ou les droites de régression ce logiciel permet de comparer divers facteurs tels que les émissions de Co2 ou le volume de déchets par pays. Nous avons aussi créer un installateur en bash qui permet de déployer automatiquement la base ainsi que de la remplir. Nous avons réalisé tout cela sur 2 semaines en respectant une méthodologie de type cycle en V. Je me suis occupé avec l'aide d'un camarade de la partie gestion de projet en plus du développement.",
+    "informations": "Ce logiciel d’aide à la décision a été développé en C# pour l’interface graphique. Il utilise également Python pour la partie calculatoire et SQL pour la gestion de la base de données. En s’appuyant sur des indicateurs statistiques tels que la moyenne ou les droites de régression, ce logiciel permet de comparer divers facteurs, comme les émissions de CO₂ ou le volume de déchets par pays. Nous avons également créé un installateur en Bash permettant de déployer automatiquement la base de données et de la remplir. Nous avons réalisé ce projet en deux semaines, en respectant une méthodologie de type cycle en V. Je me suis occupé, avec l’aide d’un camarade, de la gestion de projet en plus du développement.",
     "equipe": "5",
     "date": "06-2023"
   },
@@ -109,7 +109,7 @@
     "description_breve": "Site affichant des informations sur les 151 premiers pokemons ainsi que leur modèle 3D.",
     "miniature": "miniature_pokedex3d.webp",
     "images": ["pokedex_displayPokemon.webp", "pokedex_allPokemons.webp", "pokedex_teamType.webp", "pokedex_signup_in.webp", "pokedex_adminPage.webp", "pokedex_filter.webp", "pokedex_searchBar.webp"],
-    "informations": "Nous avons eu 1 semaines pour réaliser ce site en méthode agile. Nous avons utilisé React pour le front, Express pour le back et MongoDB pour la base de données. Je me suis principalement occupé des 2 cadres (statistiques et informations) sur la page de visualisation d'un pokémon, de la partie modification des données sur la page admin et de mettre en place la majeure partie des endpoints de l'API.",
+    "informations": "Nous avons eu une semaine pour réaliser ce site en méthode Agile. Nous avons utilisé React pour le front, Express pour le back et MongoDB pour la base de données. Je me suis principalement occupé des deux cadres (statistiques et informations) sur la page de visualisation d’un Pokémon, de la modification des données sur la page admin, ainsi que de la mise en place de la majeure partie des endpoints de l’API.",
     "equipe": "5",
     "date": "12-2024"
   },
