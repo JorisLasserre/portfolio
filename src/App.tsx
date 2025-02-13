@@ -7,12 +7,14 @@ import ProjectDetail from "./components/ProjectDetail";
 import About from "./components/Section_about";
 import BurgerMenu from "./components/Menu";
 import ScrollToAnchor from "./components/ScrollToAnchor"; 
+import ToolsPage from "./components/Page_Tools";
+import QRCodeGenerator from "./components/Tools/qr-codegenerator";
 
 const App: React.FC = () => {
   return (
     <HelmetProvider>
       <div className="relative text-gray-900 scroll-smooth min-h-screen">
-        <ScrollToAnchor /> {/* <-- Ajout ici */}
+        <ScrollToAnchor /> 
         <Routes>
           <Route
             path="/"
@@ -27,6 +29,10 @@ const App: React.FC = () => {
             }
           />
           <Route path="/project/:id" element={<><ProjectDetail /> <BurgerMenu/></>} />
+          <Route path="/tools" element={<><ToolsPage/><BurgerMenu/></>} />
+          <Route path="*" element={<div>404 - Page non trouvée</div>} />
+
+          <Route path="/tools/qr_code_generator" element={<><QRCodeGenerator/><BurgerMenu/></>} />
         </Routes>
       </div>
     </HelmetProvider>

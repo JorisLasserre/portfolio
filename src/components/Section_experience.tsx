@@ -15,7 +15,7 @@ const Experience: React.FC = () => {
   const [showAll, setShowAll] = useState(false);
 
   useEffect(() => {
-    fetch("/projects.json")
+    fetch("/Project/projects.json")
       .then((res) => res.json())
       .then((data) => setProjects(data));
   }, []);
