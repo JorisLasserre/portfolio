@@ -10,7 +10,7 @@ const About: React.FC = () => {
       <div className="max-w-5xl w-full flex flex-col md:flex-row items-center gap-12">
         
         <img 
-          src="a-min.jpg" 
+          src="a-min.webp" 
           alt="Moi" 
           className="w-96 h-96 sm:w-128 sm:h-128 object-cover shadow-lg md:mr-8 rounded-t-4xl rounded-b-4xl" 
          
