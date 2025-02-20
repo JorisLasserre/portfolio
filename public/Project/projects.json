@@ -23,6 +23,17 @@
   },
   {
     "id": "3",
+    "titre": "Pacman 3D",
+    "mots_cles": ["C#", "Unity"],
+    "description_breve": "Découverte d'Unity en réalisant un jeu de Pacman en 3D.",
+    "miniature": "/Project/miniature_pacman3d.webp",
+    "images": ["/Project/pacman1.webp", "/Project/pacman2.webp", "/Project/pacman3.webp"],
+    "informations": "Ce projet d’une semaine m’a permis de découvrir les bases d’Unity. Chaque niveau est chargé à partir d’un labyrinthe au format JSON, puis modélisé en 3D. Des fantômes mortels se déplacent dans celui-ci, et nous pouvons contrôler Pac-Man avec les touches \"ZQSD\". Pour gagner, il faut trouver la sortie ou récupérer toutes les pièces sans mourir.",
+    "equipe": "1",
+    "date": "01-2024"
+  },
+  {
+    "id": "4",
     "titre": "Théorie de l'information, wordgame et entropie",
     "mots_cles": ["Python", "Math"],
     "description_breve": "Rapport sur les applications de la théorie de l'information de Claude E. Shannon",
@@ -32,17 +43,6 @@
     "equipe": "2",
     "date": "05-2024",
     "fichiers": ["/Project/Theorie_information.pdf"]
-  },
-  {
-    "id": "4",
-    "titre": "Pacman 3D",
-    "mots_cles": ["C#", "Unity"],
-    "description_breve": "Découverte d'Unity en réalisant un jeu de Pacman en 3D.",
-    "miniature": "/Project/miniature_pacman3d.webp",
-    "images": ["/Project/pacman1.webp", "/Project/pacman2.webp", "/Project/pacman3.webp"],
-    "informations": "Ce projet d’une semaine m’a permis de découvrir les bases d’Unity. Chaque niveau est chargé à partir d’un labyrinthe au format JSON, puis modélisé en 3D. Des fantômes mortels se déplacent dans celui-ci, et nous pouvons contrôler Pac-Man avec les touches \"ZQSD\". Pour gagner, il faut trouver la sortie ou récupérer toutes les pièces sans mourir.",
-    "equipe": "1",
-    "date": "01-2024"
   },
   {
     "id": "5",
