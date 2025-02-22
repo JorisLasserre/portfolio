@@ -54,9 +54,15 @@ export default function ImageConverter() {
   };
 
   return (
-    <div className="flex flex-col items-center gap-6 p-6">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-4">
       <Card className="w-96 p-4">
         <CardBody className="flex flex-col gap-4">
+        <h1 className="text-4xl font-bold bg-gradient-to-r from-red-400 to-orange-300 bg-clip-text text-transparent">
+           Convertisseur de format d'image
+          </h1>
+          <p className="mt-2 mb-6 text-gray-600 text-xs sm:text-sm max-w-2xl mx-auto">
+            Sélectionnez une image à convertir, choisissez le format de sortie puis cliquez sur télécharger.
+          </p>
           <label className="flex items-center gap-2 px-4 py-2 bg-blue-500 text-white rounded-lg cursor-pointer hover:bg-blue-600">
             <FaUpload />
             <span>Choisir un fichier</span>

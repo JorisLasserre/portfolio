@@ -9,7 +9,6 @@ import BurgerMenu from "./components/Menu";
 import ScrollToAnchor from "./components/ScrollToAnchor"; 
 import ToolsPage from "./components/Page_Tools";
 import QRCodeGenerator from "./components/Tools/qr-codegenerator";
-import FaceMask from "./components/Tools/FaceMask";
 import ImageConverter from "./components/Tools/picture_format_converter";
 
 const App: React.FC = () => {
@@ -34,7 +33,6 @@ const App: React.FC = () => {
           <Route path="/tools" element={<><ToolsPage/><BurgerMenu/></>} />
           <Route path="*" element={<div>404 - Page non trouvée</div>} />
           <Route path="/tools/qr_code_generator" element={<><QRCodeGenerator/><BurgerMenu/></>} />
-          <Route path="/tools/face_detector" element={<><FaceMask/><BurgerMenu/></>} />
           <Route path="/tools/picture_converter" element={<><ImageConverter/><BurgerMenu/></>} />
         </Routes>
       </div>
