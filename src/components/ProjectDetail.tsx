@@ -44,7 +44,7 @@ const ProjectDetail: React.FC = () => {
     <div
       className="min-h-screen bg-cover bg-center bg-fixed"
       style={{
-      backgroundImage: 'url("/public/dark.webp")',
+      backgroundImage: 'url("/dark.webp")',
       backgroundColor: "#1c1c1c", 
       }}
     >

@@ -25,7 +25,7 @@ const ToolsPage: React.FC = () => {
         Mes Outils
       </h1>
       <p className="mt-4 text-gray-600 text-lg max-w-2xl mx-auto">
-        Découvrez mes différentes applications conçues pour faciliter divers aspects du développement et du design.
+        Une liste d'outils très aléatoires 
       </p>
       <div className="mt-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-12 px-4 md:px-16 py-6">
         {tools
