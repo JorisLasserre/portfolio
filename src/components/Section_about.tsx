@@ -19,8 +19,8 @@ const About: React.FC = () => {
         <div className="text-center md:text-left">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">À propos de moi</h2>
 <p className="mt-4 text-base sm:text-lg text-gray-700 max-w">
-  Je suis un développeur full-stack originaire des contrées verdoyantes et des plages du Pays Basque 🌶️. Après l'obtention de mon BUT Informatique, je souhaite poursuivre mes études pour allier mes compétences techniques à d'autres domaines tels que les relations humaines, l'intégration humain-système et la gestion de projet.
-  Durant mon temps libre, j'adore cuisiner et découvrir de nouvelles recettes, j'apprécie courir pour me défouler, lire de la fantasy (💖 pour la série Les Salauds gentilhommes) ou encore faire du bowling entre amis. Ma formation m’a donné des bases solides, mais c’est mon dynamisme, mon enthousiasme et ma curiosité qui me poussent à toujours aller plus loin ! 🚀
+  Je suis un développeur full-stack originaire des contrées verdoyantes et des plages du Pays Basque 🌶️. Après l'obtention de mon BUT Informatique, je souhaite poursuivre mes études pour allier mes compétences techniques à d'autres domaines tels que l'intelligence artificielle', la gestion de projet, l'intégration humain-système, la cognitique ou le génie logiciel.
+  Durant mon temps libre, j'adore cuisiner et découvrir de nouvelles recettes, j'apprécie courir pour me défouler, lire de la fantasy (💖 pour la série Les Salauds gentilhommes) ou encore faire du bowling entre amis. Ma formation m’a donné des bases solides, mais c’est mon dynamisme, mon enthousiasme et ma curiosité qui me poussent à toujours apprendre et m'améliorer ! 🚀
 </p>
 
           <a 
