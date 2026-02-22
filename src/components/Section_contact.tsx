@@ -12,10 +12,10 @@ const Contact: React.FC = () => {
     if (form.current) {
       emailjs
         .sendForm(
-          "service_1xmu1gm", 
+          "service_1xmu1gm",
           "template_50ykfne",
           form.current,
-          "gaboQ0B2_Fuaz6BBa" 
+          "gaboQ0B2_Fuaz6BBa"
         )
         .then(
           () => {
@@ -63,7 +63,7 @@ const Contact: React.FC = () => {
                 </a>
               </li>
               <li className="bg-[#e6e6e6cf] h-12 w-12 rounded-full flex items-center justify-center shrink-0">
-                <a href="https://www.linkedin.com/in/joris-lasserre-dev/" target="_blank">
+                <a href="https://www.linkedin.com/in/joris-lasserre/" target="_blank">
                   <FaLinkedin />
                 </a>
               </li>
