@@ -1,7 +1,7 @@
 
 
 const technologies = [
-  "Java", "C#", "Python", "React", "TypeScript", "Node.js", "Express", "MongoDB", "Bash", "CI/CD", "SQL", "Symfony", "HTML/CSS", "Tailwind", "Git", "Linux", "Android"
+  "Java", "C#", "Python", "React", "TypeScript", "Node.js", "Express", "MongoDB", "Bash", "CI/CD", "SQL", "Symfony", "HTML/CSS", "Tailwind", "Git", "Linux", "Android", "Matlab", "R",
 ];
 
 const About: React.FC = () => {
