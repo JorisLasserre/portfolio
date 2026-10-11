@@ -8,24 +8,27 @@ const About: React.FC = () => {
   return (
     <section id="about" className="min-h-screen flex items-center justify-center bg-gray-100 px-6 py-10">
       <div className="max-w-5xl w-full flex flex-col md:flex-row items-center gap-12">
-        
-        <img 
-          src="a-min.webp" 
-          alt="Moi" 
-          className="w-96 h-96 sm:w-128 sm:h-128 object-cover shadow-lg md:mr-8 rounded-t-4xl rounded-b-4xl" 
-         
+
+        <img
+          src="a-min.webp"
+          alt="Moi"
+          className="w-96 h-96 sm:w-128 sm:h-128 object-cover shadow-lg md:mr-8 rounded-t-4xl rounded-b-4xl"
+
         />
 
         <div className="text-center md:text-left">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">À propos de moi</h2>
-<p className="mt-4 text-base sm:text-lg text-gray-700 max-w">
-  Je suis un développeur full-stack originaire des contrées verdoyantes et des plages du Pays Basque 🌶️. Après l'obtention de mon BUT Informatique, je souhaite poursuivre mes études pour allier mes compétences techniques à d'autres domaines tels que l'intelligence artificielle, la gestion de projet, l'intégration humain-système, la cognitique ou le génie logiciel.
-  Durant mon temps libre, j'adore cuisiner et découvrir de nouvelles recettes, j'apprécie courir pour me défouler, lire de la fantasy (💖 pour la série Les Salauds gentilhommes) ou encore faire du bowling entre amis. Ma formation m’a donné des bases solides, mais c’est mon dynamisme, mon enthousiasme et ma curiosité qui me poussent à toujours apprendre et m'améliorer ! 🚀
-</p>
+          <p className="mt-4 text-base sm:text-lg text-gray-700 max-w">
+            Je suis étudiant ingénieur en informatique, originaire du Pays basque. Grâce à mon BUT Informatique, j’ai acquis de solides compétences techniques.
 
-          <a 
-            href="/CV_Lasserre_Joris.pdf" 
-            target="_blank" 
+            Je souhaite aujourd’hui mettre mes compétences d’ingénieur à profit lors de mes prochains stages et de m’orienter vers les métiers d’AI Engineer et de Data Engineer.
+
+            Curieux, dynamique et toujours enthousiaste à l’idée d’apprendre et de progresser au contact des autres, j’aime relever de nouveaux défis. Pendant mon temps libre, je pratique la musculation et la natation. Depuis cette année, je me suis également mis à la basse et j’ai rejoint un groupe de musique. C'est un nouveau défi aussi challengeant qu’amusant !
+          </p>
+
+          <a
+            href="/CV_Lasserre_Joris.pdf"
+            target="_blank"
             rel="noopener noreferrer"
             className="inline-block mt-6 px-6 py-3 bg-blue-600 text-white text-lg font-semibold rounded-lg shadow-md hover:bg-blue-700 transition"
           >
