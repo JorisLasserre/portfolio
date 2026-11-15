@@ -34,10 +34,9 @@ const ToolsPage: React.FC = () => {
             <Link
               to={tool.lien}
               key={tool.id}
-              rel="noopener noreferrer"
               className="max-w-sm rounded-lg overflow-hidden shadow-lg bg-white flex flex-col h-full transform transition duration-300 hover:scale-95"
             >
-              <img className="w-full h-64 object-cover" src={`${tool.image[0]}`} alt={tool.titre} />
+              <img className="w-full h-64 object-cover" src={tool.image[0]} alt={tool.titre} />
               <div className="px-6 py-4 flex-grow">
                 <h3 className="font-bold text-xl mb-2 text-gray-800">{tool.titre}</h3>
                 <p className="text-gray-700 text-base">{tool.description_breve}</p>

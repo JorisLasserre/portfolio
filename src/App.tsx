@@ -10,6 +10,7 @@ import ScrollToAnchor from "./components/ScrollToAnchor";
 import ToolsPage from "./components/Page_Tools";
 import QRCodeGenerator from "./components/Tools/qr-codegenerator";
 import ImageConverter from "./components/Tools/picture_format_converter";
+import Memo from "./components/Tools/memo";
 
 const App: React.FC = () => {
   return (
@@ -34,6 +35,7 @@ const App: React.FC = () => {
           <Route path="*" element={<div>404 - Page non trouvée</div>} />
           <Route path="/tools/qr_code_generator" element={<><QRCodeGenerator/><BurgerMenu/></>} />
           <Route path="/tools/picture_converter" element={<><ImageConverter/><BurgerMenu/></>} />
+          <Route path="/tools/memo" element={<><Memo/><BurgerMenu/></>} />
         </Routes>
       </div>
     </HelmetProvider>

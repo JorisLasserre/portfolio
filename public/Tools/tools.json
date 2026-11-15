@@ -12,5 +12,12 @@
     "description_breve": "Des liens, un texte que vous souhaitez partager facilement ? Générez le sous forme de QR code ",
     "lien": "/tools/qr_code_generator",
     "image": ["/Tools/miniature_generateur_qrcode.png"]
+  },
+  {
+    "id": "3",
+    "titre": "Mémo",
+    "description_breve": "Apprenez vos listes grâce à des fiches, des quiz et un suivi de progression.",
+    "lien": "/tools/memo",
+    "image": ["/Tools/miniature_memo.svg"]
   }
 ]
