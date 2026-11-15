@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { sides, isConfusable } from '../core/deck.js';
 import { shuffle } from '../core/random.js';
 import { primary, qLabel, question as questionBox, tile, tileKo, tileOk, tileSelected } from '../ui.js';
-
+import { notionCards } from '../core/kind.js';
 const HUES = [210, 25, 140, 280, 350];
 const bg = (i) => `hsl(${HUES[i % HUES.length]} 85% 90%)`;
 const border = (i) => `hsl(${HUES[i % HUES.length]} 60% 50%)`;
@@ -10,12 +10,12 @@ const border = (i) => `hsl(${HUES[i % HUES.length]} 60% 50%)`;
 export default {
   id: 'matching',
   label: 'Association de paires',
-  isAvailable: (deck) => deck.cards.length >= 3,
+  isAvailable: (deck) => notionCards(deck).length >= 3,
 
   create({ deck, card, direction, rng }) {
     // 5 paires max, sans cartes ambiguës entre elles
     const chosen = [card];
-    for (const c of shuffle(deck.cards.filter((x) => x.id !== card.id), rng)) {
+    for (const c of shuffle(notionCards(deck).filter((x) => x.id !== card.id), rng)) {
       if (chosen.length >= 5) break;
       if (chosen.every((x) => !isConfusable(deck, x, c, direction))) chosen.push(c);
     }

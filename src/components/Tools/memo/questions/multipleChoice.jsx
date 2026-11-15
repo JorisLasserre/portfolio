@@ -2,16 +2,16 @@ import { useState } from 'react';
 import { sides, isConfusable } from '../core/deck.js';
 import { shuffle } from '../core/random.js';
 import { option, optionKo, optionOk, qLabel, qPrompt, question as questionBox } from '../ui.js';
-
+import { notionCards } from '../core/kind.js';
 export default {
   id: 'multipleChoice',
   label: 'Choix multiple',
-  isAvailable: (deck) => deck.cards.length >= 2,
+  isAvailable: (deck) => notionCards(deck).length >= 2,
 
   create({ deck, card, direction, rng }) {
     const s = sides(deck, card, direction);
     const others = shuffle(
-      deck.cards.filter((c) => c.id !== card.id && !isConfusable(deck, card, c, direction)),
+      notionCards(deck).filter((c) => c.id !== card.id && !isConfusable(deck, card, c, direction)),
       rng
     ).slice(0, 3);
     const options = shuffle(

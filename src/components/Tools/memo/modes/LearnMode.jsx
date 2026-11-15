@@ -1,5 +1,7 @@
 import { useEffect, useMemo, useState } from 'react';
 import { getPhases } from '../core/deck.js';
+import { orderedCards } from '../core/learnEngine.js';
+
 import {
   startPhase,
   firstIncompletePhase,
@@ -14,15 +16,20 @@ import { questionTypes } from '../questions/index.js';
 import ProgressBar from '../components/ProgressBar.jsx';
 import FlashCard from '../components/FlashCard.jsx';
 import { actions, badge, badgeAlt, badgeMuted, linkBtn, panel, primary, screen, secondary, topTitle, topbar } from '../ui.js';
-
+import { typeForCard } from '../questions/index.js';
 const CONGRATS = [
   'Bravo, phase terminée !',
   'Excellent travail !',
   'Tu progresses à toute vitesse !',
-  'Joli ! Ces mots sont dans la poche.',
+  'Joli ! Ces notions sont dans la poche.',
 ];
 
-export default function LearnMode({ deck, onExit }) {
+export default function LearnMode({ deck: rawDeck, onExit }) {
+  // Ordre figé pour toute la session : mélangé une seule fois si rien n'est appris.
+  const [deck] = useState(() => {
+    const levels = loadProgress(rawDeck.id).levels;
+    return { ...rawDeck, cards: orderedCards(rawDeck, levels) };
+  });
   const phases = useMemo(() => getPhases(deck), [deck]);
   const [session, setSession] = useState(() => {
     const levels = loadProgress(deck.id).levels;
@@ -40,8 +47,8 @@ export default function LearnMode({ deck, onExit }) {
 
   const question = useMemo(() => {
     if (!item || item.step !== 'question') return null;
-    const type = session.part === 'discover' ? questionTypes.multipleChoice : questionTypes.written;
     const card = deck.cards.find((c) => c.id === item.cardId);
+    const type = typeForCard(card, session.part === 'discover' ? 'multipleChoice' : 'written');
     return { type, data: type.create({ deck, card, direction: item.direction, rng: Math.random }) };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [item, session.part]);
@@ -114,7 +121,7 @@ export default function LearnMode({ deck, onExit }) {
         <ProgressBar
           label="Deck complet"
           value={overall.ratio}
-          detail={`${overall.mastered} / ${overall.total} mots appris`}
+          detail={`${overall.mastered} / ${overall.total} notions apprises`}
           tone="accent"
         />
       </section>
@@ -123,7 +130,7 @@ export default function LearnMode({ deck, onExit }) {
         <section className={`${panel} items-center text-center`}>
           <div className="text-5xl">🎉</div>
           <h2 className="text-2xl font-semibold">{congrats}</h2>
-          <p>Tu as appris les {phase.cards.length} mots de la phase {session.phaseIndex + 1}.</p>
+          <p>Tu as appris les {phase.cards.length} notions de la phase {session.phaseIndex + 1}.</p>
           {allDone ? (
             <p><strong>Tout le deck est appris, félicitations !</strong></p>
           ) : (

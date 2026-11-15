@@ -1,28 +1,36 @@
 import { shuffle, pick } from './random.js';
 import { randomDirection } from './deck.js';
-import { getType } from '../questions/index.js';
+import { getType, typeForCard } from '../questions/index.js';
 
 /**
- * Construit un test : `count` questions tirées au hasard parmi les types choisis.
- * Les cartes sont parcourues en boucle (mélangées) pour éviter les doublons tant que possible.
+ * Construit un test : `count` questions. Pour chaque question, un type choisi
+ * parmi ceux demandés est tiré, puis une carte compatible avec ce type.
  */
 export function buildTest(deck, { count, typeIds }, rng = Math.random) {
-  const types = typeIds.map(getType).filter((t) => t && t.isAvailable(deck));
-  if (!types.length) return [];
+  const pools = {};
+  for (const id of typeIds) {
+    const type = getType(id);
+    if (!type || !type.isAvailable(deck)) continue;
+    const cards = deck.cards.filter((c) => typeForCard(c, id) === type);
+    if (cards.length) pools[id] = { type, cards: shuffle(cards, rng), idx: 0 };
+  }
 
-  let order = shuffle(deck.cards, rng);
-  let idx = 0;
-  const nextCard = () => {
-    if (idx >= order.length) {
-      order = shuffle(deck.cards, rng);
-      idx = 0;
+  const ids = Object.keys(pools);
+  if (!ids.length) return [];
+
+  // Parcourt chaque pool en boucle, mélangé, pour limiter les doublons.
+  const nextCard = (pool) => {
+    if (pool.idx >= pool.cards.length) {
+      pool.cards = shuffle(pool.cards, rng);
+      pool.idx = 0;
     }
-    return order[idx++];
+    return pool.cards[pool.idx++];
   };
 
   return Array.from({ length: count }, () => {
-    const type = pick(types, rng);
-    return type.create({ deck, card: nextCard(), direction: randomDirection(deck, rng), rng });
+    const pool = pools[pick(ids, rng)];
+    const card = nextCard(pool);
+    return pool.type.create({ deck, card, direction: randomDirection(deck, rng), rng });
   });
 }
 

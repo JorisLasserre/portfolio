@@ -2,11 +2,11 @@ import { useState } from 'react';
 import { sides, isConfusable } from '../core/deck.js';
 import { shuffle } from '../core/random.js';
 import { option, optionKo, optionOk, qLabel, qPrompt, question as questionBox } from '../ui.js';
-
+import { notionCards } from '../core/kind.js';
 export default {
   id: 'trueFalse',
   label: 'Vrai / Faux',
-  isAvailable: (deck) => deck.cards.length >= 2,
+  isAvailable: (deck) => notionCards(deck).length >= 2,
 
   create({ deck, card, direction, rng }) {
     const s = sides(deck, card, direction);
@@ -14,7 +14,7 @@ export default {
     let proposed = s.answer;
     if (!isTrue) {
       const other = shuffle(
-        deck.cards.filter((c) => c.id !== card.id && !isConfusable(deck, card, c, direction)),
+        notionCards(deck).filter((c) => c.id !== card.id && !isConfusable(deck, card, c, direction)),
         rng
       )[0];
       if (other) proposed = sides(deck, other, direction).answer;

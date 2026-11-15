@@ -1,0 +1,489 @@
+{
+  "title": "Traitement des images numériques : annales ENSC 2016-2024",
+  "frontLabel": "Question",
+  "backLabel": "Réponse",
+  "phaseSize": 10,
+  "bidirectional": false,
+  "cards": [
+    {
+      "id": "1",
+      "kind": "notion",
+      "front": "Dans une image « vraie couleur » RVB sur 8 bits, combien d'octets par pixel ?",
+      "back": "3 octets ; 24 bits"
+    },
+    {
+      "id": "2",
+      "kind": "notion",
+      "front": "Dans une image « indexée », que contient chaque pixel ?",
+      "back": "un indice ; index de palette"
+    },
+    {
+      "id": "3",
+      "kind": "notion",
+      "front": "Combien de couleurs une palette codée sur 8 bits peut-elle contenir ?",
+      "back": "256"
+    },
+    {
+      "id": "4",
+      "kind": "redaction",
+      "front": "Décrire et comparer les représentations en couleurs « vraies » et « indexées » dans le codage des images numériques. Préciser les valeurs et le format numérique usuels.",
+      "back": "(1) Vraies couleurs : chaque pixel stocke directement ses composantes R, G et B, en général 8 bits par composante, soit 24 bits par pixel et environ 16,7 millions de couleurs. (2) Couleurs indexées : chaque pixel stocke un indice, souvent sur 8 bits, qui pointe vers une table de couleurs (palette ou LUT) de 256 entrées, chacune donnée en RVB. (3) Comparaison : l'indexé économise la mémoire mais limite le nombre de couleurs, et les traitements comme la moyenne ou le filtrage n'ont pas de sens sur les indices ; il faut donc souvent repasser en vraies couleurs."
+    },
+    {
+      "id": "5",
+      "kind": "redaction",
+      "front": "Détailler plusieurs espaces de représentation ou de codage des couleurs autres que le RVB.",
+      "back": "(1) TSL ou HSV : teinte, saturation, luminance ou valeur, proche de la perception humaine. (2) YUV ou YCbCr : une luminance et deux chrominances, utilisé en vidéo et en compression (sous-échantillonnage des chrominances). (3) CMJ ou CMJN : synthèse soustractive, utilisé pour l'impression. (4) Lab : espace perceptuellement uniforme, où les distances correspondent à peu près aux différences perçues. (5) XYZ : espace de référence de la CIE, base de la colorimétrie."
+    },
+    {
+      "id": "6",
+      "kind": "redaction",
+      "front": "Détailler plusieurs codages des vraies couleurs.",
+      "back": "(1) RVB 24 bits : 8 bits par composante, soit 16,7 millions de couleurs. (2) RVB 16 bits (format 5-6-5) : moins de mémoire, moins de nuances. (3) RVBA 32 bits : ajoute un canal alpha pour la transparence. (4) Codage flottant : valeurs réelles, utile pour le traitement scientifique et les images à grande dynamique."
+    },
+    {
+      "id": "7",
+      "kind": "notion",
+      "front": "Espace séparant luminance et chrominances, utilisé en vidéo ?",
+      "back": "YUV ; YCbCr"
+    },
+    {
+      "id": "8",
+      "kind": "notion",
+      "front": "Quelles sont les trois composantes de l'espace TSL ?",
+      "back": "teinte, saturation, luminance"
+    },
+    {
+      "id": "9",
+      "kind": "vf",
+      "front": "Pour un même format numérique, la représentation en vraies couleurs est plus coûteuse en mémoire que la représentation en fausses couleurs.",
+      "back": "Vrai"
+    },
+    {
+      "id": "10",
+      "kind": "vf",
+      "front": "Le pouvoir séparateur maximal de l'œil est d'environ 1/60e de degré.",
+      "back": "Vrai"
+    },
+    {
+      "id": "11",
+      "kind": "vf",
+      "front": "Dans la rétine, les cônes sont organisés en trois familles de sensibilité relative quasi identique.",
+      "back": "Faux"
+    },
+    {
+      "id": "12",
+      "kind": "vf",
+      "front": "Le pouvoir séparateur maximal de l'œil est d'environ 1/120e de degré.",
+      "back": "Faux"
+    },
+    {
+      "id": "13",
+      "kind": "vf",
+      "front": "Une palette de couleurs définit les composantes rouge, verte et bleue de 256 couleurs différentes.",
+      "back": "Vrai"
+    },
+    {
+      "id": "14",
+      "kind": "vf",
+      "front": "Toute couleur visible peut être reproduite par une combinaison linéaire à poids positifs des primaires R, G et B.",
+      "back": "Faux"
+    },
+    {
+      "id": "15",
+      "kind": "vf",
+      "front": "La segmentation couleur peut donner des résultats différents selon l'espace colorimétrique choisi.",
+      "back": "Vrai"
+    },
+    {
+      "id": "16",
+      "kind": "vf",
+      "front": "De manière générale, les taux de compression vidéo sont plus élevés que ceux des images.",
+      "back": "Vrai"
+    },
+    {
+      "id": "17",
+      "kind": "vf",
+      "front": "La couleur est une propriété importante d'un objet, à laquelle le système visuel humain est particulièrement sensible.",
+      "back": "Faux"
+    },
+    {
+      "id": "18",
+      "kind": "redaction",
+      "front": "Que représente la couleur d'un objet ? Argumenter en présentant une modélisation de la chaîne d'imagerie.",
+      "back": "(1) La couleur n'est pas une propriété intrinsèque de l'objet : c'est une sensation produite par le système visuel à partir de la lumière reçue. (2) Chaîne d'imagerie : une source émet un spectre E(λ), l'objet réfléchit une fraction R(λ) de cette lumière, le capteur (ou l'œil) intègre le résultat avec ses sensibilités S(λ). (3) Le signal de couleur s'écrit C = somme de E(λ) × R(λ) × S(λ) sur λ : il dépend donc de la source, de l'objet et du capteur."
+    },
+    {
+      "id": "19",
+      "kind": "notion",
+      "front": "Quels sont les trois types de cônes rétiniens ?",
+      "back": "L, M, S ; rouge, vert, bleu"
+    },
+    {
+      "id": "20",
+      "kind": "notion",
+      "front": "Quelles sont les primaires de la synthèse soustractive ?",
+      "back": "cyan, magenta, jaune ; CMJ"
+    },
+    {
+      "id": "21",
+      "kind": "notion",
+      "front": "Échantillonnage : que discrétise-t-on ?",
+      "back": "les coordonnées spatiales ; discrétisation spatiale"
+    },
+    {
+      "id": "22",
+      "kind": "notion",
+      "front": "Quantification : que discrétise-t-on ?",
+      "back": "les niveaux d'intensité ; les valeurs"
+    },
+    {
+      "id": "23",
+      "kind": "notion",
+      "front": "Seuillage : quel est le résultat typique ?",
+      "back": "image binaire ; binarisation"
+    },
+    {
+      "id": "24",
+      "kind": "notion",
+      "front": "Reconnaissance de formes : que cherche-t-on à faire ?",
+      "back": "identifier ou classer les objets"
+    },
+    {
+      "id": "25",
+      "kind": "redaction",
+      "front": "Définir les concepts d'échantillonnage, de quantification, de seuillage et de reconnaissance de formes.",
+      "back": "(1) Échantillonnage : discrétisation spatiale de l'image, en ne prélevant les valeurs que sur une grille de points (les pixels). (2) Quantification : discrétisation des valeurs prises par chaque pixel, réparties sur un nombre fini de niveaux. (3) Seuillage : comparaison de chaque pixel à un seuil T pour produire une image binaire ou segmenter l'image. (4) Reconnaissance de formes : identification ou classement automatique d'objets à partir de descripteurs (forme, taille, couleur, texture)."
+    },
+    {
+      "id": "26",
+      "kind": "redaction",
+      "front": "Que représente la transformée de Fourier discrète d'une image ? Préciser son intérêt et donner un exemple d'application possible.",
+      "back": "(1) Elle décompose l'image en une somme de sinusoïdes, chacune caractérisée par une fréquence, une amplitude et une phase : on passe du domaine spatial au domaine fréquentiel. (2) Intérêt : le filtrage devient un produit dans le domaine fréquentiel, les structures périodiques et les textures apparaissent, et l'on peut analyser ou compresser l'image. (3) Exemple : filtrage passe-bas pour réduire le bruit, ou suppression d'une trame périodique."
+    },
+    {
+      "id": "27",
+      "kind": "vf",
+      "front": "L'échantillonnage a un effet sur la transformée de Fourier d'une image.",
+      "back": "Vrai"
+    },
+    {
+      "id": "28",
+      "kind": "vf",
+      "front": "La phase de la transformée de Fourier est liée aux contours des objets visibles dans une image.",
+      "back": "Vrai"
+    },
+    {
+      "id": "29",
+      "kind": "vf",
+      "front": "L'histogramme est une transformée bijective qui permet de reconstituer l'image.",
+      "back": "Faux"
+    },
+    {
+      "id": "30",
+      "kind": "notion",
+      "front": "Quel outil donne la répartition des niveaux de gris d'une image ?",
+      "back": "histogramme"
+    },
+    {
+      "id": "31",
+      "kind": "redaction",
+      "front": "Rappeler la formule du produit de convolution 1D et détailler un exemple de calcul complet à partir d'un signal et d'un filtre de votre choix.",
+      "back": "Formule : y[n] = somme sur k de f[k] × h[n − k]. Exemple : signal f = [1, 2, 3] (indices 0 à 2), filtre h = [1, 1]. y[0] = 1 ; y[1] = f[0]h[1] + f[1]h[0] = 1 + 2 = 3 ; y[2] = f[1]h[1] + f[2]h[0] = 2 + 3 = 5 ; y[3] = f[2]h[1] = 3. Résultat : y = [1, 3, 5, 3]."
+    },
+    {
+      "id": "32",
+      "kind": "notion",
+      "front": "Qu'est-ce qui caractérise entièrement un filtre convolutif linéaire invariant ?",
+      "back": "sa réponse impulsionnelle"
+    },
+    {
+      "id": "33",
+      "kind": "vf",
+      "front": "L'application d'un filtre convolutif à une image peut aussi être obtenue par un traitement dans le domaine fréquentiel.",
+      "back": "Vrai"
+    },
+    {
+      "id": "34",
+      "kind": "redaction",
+      "front": "Expliquer les différences entre un filtre linéaire et un filtre non linéaire, et donner un exemple de chacun.",
+      "back": "(1) Filtre linéaire : chaque pixel de sortie est une combinaison linéaire des pixels du voisinage (convolution) ; il vérifie superposition et invariance. Exemple : moyenneur ou gaussien, qui lisse l'image mais floute les contours. (2) Filtre non linéaire : la sortie dépend d'une opération non linéaire sur le voisinage (tri, maximum, seuillage). Exemple : filtre médian, qui supprime le bruit impulsionnel tout en préservant mieux les contours."
+    },
+    {
+      "id": "35",
+      "kind": "notion",
+      "front": "Quel filtre non linéaire classique utilise-t-on contre le bruit « poivre et sel » ?",
+      "back": "filtre médian ; médian"
+    },
+    {
+      "id": "36",
+      "kind": "vf",
+      "front": "Le bruit « poivre et sel » peut être atténué par un filtrage fréquentiel.",
+      "back": "Faux"
+    },
+    {
+      "id": "37",
+      "kind": "vf",
+      "front": "À taille de voisinage égale, un filtrage médian est plus rapide à calculer qu'un filtrage convolutif.",
+      "back": "Faux"
+    },
+    {
+      "id": "38",
+      "kind": "vf",
+      "front": "Un bruit blanc gaussien additif à moyenne nulle peut être atténué par un filtre non linéaire.",
+      "back": "Faux"
+    },
+    {
+      "id": "39",
+      "kind": "redaction",
+      "front": "Décrire les différentes approches de construction de filtres discrets moyenneurs 2D.",
+      "back": "(1) Moyenneur uniforme : tous les coefficients valent 1/N (par exemple 1/9 sur 3×3). (2) Moyenneur pondéré : coefficients plus forts au centre, comme une approximation discrète de gaussienne, par exemple [[1,2,1],[2,4,2],[1,2,1]]/16. (3) Filtre séparable : produit d'un filtre 1D vertical et d'un filtre 1D horizontal, ce qui réduit le nombre de calculs. (4) Échantillonnage d'une gaussienne 2D puis normalisation pour que la somme des coefficients vaille 1."
+    },
+    {
+      "id": "40",
+      "kind": "notion",
+      "front": "Pourquoi normaliser un filtre moyenneur (somme des coefficients égale à 1) ?",
+      "back": "conserver la luminosité moyenne"
+    },
+    {
+      "id": "41",
+      "kind": "redaction",
+      "front": "Développer la démarche qui conduit à la formulation des coefficients d'un filtre à réponse impulsionnelle finie estimant la dérivée horizontale (ou verticale) d'une image.",
+      "back": "(1) Approximer la dérivée par un taux d'accroissement centré : f'(x) ≈ (f(x+1) − f(x−1)) / 2. (2) Écrire cette approximation comme une convolution : les coefficients sont les poids appliqués aux pixels voisins, soit [−1/2, 0, 1/2] (ou [1, 0, −1] à normaliser). (3) La réponse impulsionnelle est de longueur finie, donc le filtre est à réponse impulsionnelle finie. (4) Pour la dérivée verticale, on transpose le filtre. (5) On ajoute souvent un lissage perpendiculaire, par exemple [1, 2, 1], pour limiter le bruit."
+    },
+    {
+      "id": "42",
+      "kind": "redaction",
+      "front": "Donner les matrices des filtres dérivateurs classiques (Prewitt et Sobel) pour la dérivée horizontale.",
+      "back": "Prewitt horizontal : (1/6) × [[1,0,-1],[1,0,-1],[1,0,-1]]. Sobel horizontal : (1/8) × [[1,0,-1],[2,0,-2],[1,0,-1]]. Pour la dérivée verticale, on transpose : Prewitt (1/6) × [[1,1,1],[0,0,0],[-1,-1,-1]] et Sobel (1/8) × [[1,2,1],[0,0,0],[-1,-2,-1]]."
+    },
+    {
+      "id": "43",
+      "kind": "notion",
+      "front": "Quel opérateur dérivateur utilise un lissage [1 2 1] perpendiculaire à la dérivée ?",
+      "back": "Sobel"
+    },
+    {
+      "id": "44",
+      "kind": "redaction",
+      "front": "Expliquer la démarche et les principes du rehaussement de contours.",
+      "back": "(1) Objectif : accentuer les transitions de l'image pour la rendre plus nette. (2) Principe : on estime les contours par un dérivateur (gradient) ou un laplacien, puis on les ajoute à l'image. (3) Formule typique : g = f − k × Δf, où Δf est le laplacien de f et k un gain positif, ce qui accentue les variations rapides. (4) Limite : le bruit est aussi amplifié, d'où un lissage préalable ou un seuillage des contours."
+    },
+    {
+      "id": "45",
+      "kind": "redaction",
+      "front": "Expliquer les informations qui peuvent être déterminées par le calcul du gradient de l'intensité d'une image et détailler quelques applications.",
+      "back": "(1) Norme G = sqrt(Gx² + Gy²) : force du contour, c'est-à-dire le contraste local. (2) Direction θ = atan(Gy / Gx) : orientation de la variation, le contour est perpendiculaire à ce gradient. (3) Applications : détection de contours (seuillage de la norme), rehaussement de contours, détection de coins, estimation de mouvement (flot optique), analyse de textures."
+    },
+    {
+      "id": "46",
+      "kind": "notion",
+      "front": "Formule de la norme du gradient ?",
+      "back": "G = sqrt(Gx² + Gy²)"
+    },
+    {
+      "id": "47",
+      "kind": "vf",
+      "front": "Un contour correspond toujours à une variation très rapide de l'intensité.",
+      "back": "Faux"
+    },
+    {
+      "id": "48",
+      "kind": "vf",
+      "front": "Des estimées des dérivées premières horizontale et verticale d'une image scalaire peuvent être obtenues à l'aide de filtres convolutifs.",
+      "back": "Vrai"
+    },
+    {
+      "id": "49",
+      "kind": "vf",
+      "front": "Un rehaussement de contours s'obtient en retranchant à une image une fraction de la norme de son gradient.",
+      "back": "Vrai"
+    },
+    {
+      "id": "50",
+      "kind": "vf",
+      "front": "Les filtres de Canny combinent une dérivation directionnelle et un lissage.",
+      "back": "Vrai"
+    },
+    {
+      "id": "51",
+      "kind": "redaction",
+      "front": "Caractériser la transformation définie par la matrice homographique H = [[1,0,0],[0,1,0],[0,0,2]].",
+      "back": "En coordonnées homogènes, (x, y, 1) devient (x, y, 2), soit en coordonnées cartésiennes (x/2, y/2). C'est une homothétie de centre O et de rapport 1/2."
+    },
+    {
+      "id": "52",
+      "kind": "redaction",
+      "front": "Caractériser la transformation définie par H = [[sqrt(2)/2, -sqrt(2)/2, 50],[sqrt(2)/2, sqrt(2)/2, 20],[0,0,1]].",
+      "back": "Rotation de centre O et d'angle 45° (cos 45° = sin 45° = sqrt(2)/2), suivie d'une translation de vecteur (50, 20). C'est une isométrie directe, donc une transformation rigide sans changement d'échelle."
+    },
+    {
+      "id": "53",
+      "kind": "notion",
+      "front": "H = [[0,-1,0],[1,0,0],[0,0,1]] : quelle transformation ?",
+      "back": "rotation de 90° ; rotation d'un quart de tour"
+    },
+    {
+      "id": "54",
+      "kind": "notion",
+      "front": "H = [[1,0,10],[0,1,-20],[0,0,1]] : quelle transformation ?",
+      "back": "translation de vecteur (10,20)"
+    },
+    {
+      "id": "55",
+      "kind": "notion",
+      "front": "H = diag(2, 2, 3) : quelle transformation ?",
+      "back": "homothétie de rapport 2 sur 3 ; homothétie de rapport deux tiers"
+    },
+    {
+      "id": "56",
+      "kind": "notion",
+      "front": "H = diag(1, 1, 2) : quelle transformation ?",
+      "back": "homothétie de rapport 1 sur 2 ; homothétie de rapport un demi"
+    },
+    {
+      "id": "57",
+      "kind": "vf",
+      "front": "Toute homographie peut se décomposer en une cascade de translations, rotations et changements d'échelle.",
+      "back": "Faux"
+    },
+    {
+      "id": "58",
+      "kind": "vf",
+      "front": "Les coordonnées homogènes permettent de rassembler plusieurs transformations géométriques successives afin de réduire le nombre de calculs.",
+      "back": "Vrai"
+    },
+    {
+      "id": "59",
+      "kind": "notion",
+      "front": "Dans une matrice H 3×3 de transformation affine, quelle est la dernière ligne ?",
+      "back": "0 0 1"
+    },
+    {
+      "id": "60",
+      "kind": "notion",
+      "front": "Qu'est-ce qui distingue une homographie d'une transformation affine ?",
+      "back": "dernière ligne quelconque ; effet de perspective"
+    },
+    {
+      "id": "61",
+      "kind": "redaction",
+      "front": "Identifier la nature et les caractéristiques de l'opérateur H = (1/10) × [[1,0,-1],[3,0,-3],[1,0,-1]].",
+      "back": "Dérivée horizontale avec lissage vertical. Séparable : produit de (1/5)[1 3 1] (vertical) par (1/2)[1 0 -1] (horizontal). Somme des coefficients nulle, donc passe-haut qui détecte les contours verticaux (réponse nulle sur zone uniforme)."
+    },
+    {
+      "id": "62",
+      "kind": "redaction",
+      "front": "Identifier la nature et les caractéristiques de l'opérateur H = (1/2) × [[1,1,1],[1,-8,1],[1,1,1]].",
+      "back": "Passe-haut (somme des coefficients nulle, gain nul en continu) : détection de contours ou rehaussement. Non séparable (rang 2), mais décomposable en somme de deux filtres 1D. Le facteur 1/2 ne change pas la nature (version 2018 sans facteur)."
+    },
+    {
+      "id": "63",
+      "kind": "redaction",
+      "front": "Identifier la nature et les caractéristiques de l'opérateur H = (1/20) × [[1,2,1],[2,8,2],[1,2,1]].",
+      "back": "Passe-bas de lissage : somme des coefficients égale à 1, donc luminosité moyenne conservée. Peut s'écrire 0,2 × Dirac + 0,8 × gaussien 3×3. Atténue les hautes fréquences."
+    },
+    {
+      "id": "64",
+      "kind": "redaction",
+      "front": "Identifier la nature et les caractéristiques de l'opérateur H = (1/36) × [[1,4,1],[4,16,4],[1,4,1]].",
+      "back": "Passe-bas gaussien 3×3, somme des coefficients égale à 1. Séparable : produit de (1/6)[1 4 1] (vertical) par (1/6)[1 4 1] (horizontal). Lisse l'image en atténuant les hautes fréquences."
+    },
+    {
+      "id": "65",
+      "kind": "redaction",
+      "front": "Identifier la nature et les caractéristiques de l'opérateur H = (1/3) × [[1,1,1],[-2,-2,-2],[1,1,1]].",
+      "back": "Dérivée seconde verticale avec lissage horizontal. Séparable : produit de [1 -2 1] (vertical) par (1/3)[1 1 1] (horizontal). Somme nulle, passe-haut : il détecte les variations verticales d'intensité, donc les contours horizontaux."
+    },
+    {
+      "id": "66",
+      "kind": "redaction",
+      "front": "Identifier la nature et les caractéristiques de l'opérateur H = [[0,1,0],[1,-4,1],[0,1,0]].",
+      "back": "Laplacien discret 2D : passe-haut isotrope, somme des coefficients nulle, qui détecte les variations rapides dans toutes les directions. Non séparable (rang 2), mais somme de deux dérivées secondes 1D [1 -2 1] (horizontale et verticale)."
+    },
+    {
+      "id": "67",
+      "kind": "redaction",
+      "front": "Identifier la nature et les caractéristiques de l'opérateur H = (1/8) × [[1,0,-1],[2,0,-2],[1,0,-1]].",
+      "back": "Opérateur de Sobel horizontal : dérivée horizontale avec lissage vertical [1 2 1]. Séparable : produit de (1/4)[1 2 1]^T par (1/2)[1 0 -1]. Passe-haut qui détecte les contours verticaux, avec un lissage qui limite le bruit."
+    },
+    {
+      "id": "68",
+      "kind": "redaction",
+      "front": "Identifier la nature et les caractéristiques de l'opérateur H = [[0,1,0],[1,-4,1],[0,1,10]].",
+      "back": "Variante du laplacien avec 10 en coin : somme des coefficients égale à 10, donc gain non nul en continu, ce n'est pas un passe-haut pur. Non séparable (rang 3) : pas de produit de deux filtres 1D."
+    },
+    {
+      "id": "69",
+      "kind": "redaction",
+      "front": "Identifier la nature et les caractéristiques de l'opérateur H = (1/16) × [[1,2,1],[2,4,2],[1,2,1]].",
+      "back": "Passe-bas gaussien 3×3, somme des coefficients égale à 1. Séparable : produit de (1/4)[1 2 1] (vertical) par (1/4)[1 2 1] (horizontal). Lisse l'image et atténue le bruit."
+    },
+    {
+      "id": "70",
+      "kind": "redaction",
+      "front": "Identifier la nature et les caractéristiques de l'opérateur H = (1/25) × [[1,3,1],[3,9,3],[1,3,1]].",
+      "back": "Passe-bas de lissage, somme des coefficients égale à 1. Séparable : produit de (1/5)[1 3 1] par (1/5)[1 3 1]. Atténue les hautes fréquences et conserve la luminosité moyenne."
+    },
+    {
+      "id": "71",
+      "kind": "redaction",
+      "front": "Identifier la nature et les caractéristiques de l'opérateur H = (1/4) × [[1,-2,1],[2,-4,2],[1,-2,1]].",
+      "back": "Séparable : produit de (1/2)[1 2 1]^T (lissage vertical) par (1/2)[1 -2 1] (dérivée seconde horizontale). Somme nulle, donc passe-haut qui détecte les variations horizontales d'intensité (contours verticaux), avec un lissage vertical qui limite le bruit."
+    },
+    {
+      "id": "72",
+      "kind": "redaction",
+      "front": "Calculer le filtre obtenu par la convolution de H1 = (1/5)[1 ; 3 ; 1] et H2 = (1/6)[1 1 2 1 1], et préciser sa nature.",
+      "back": "Le filtre obtenu est séparable et de taille 3×5 : (1/30) × [[1,1,2,1,1],[3,3,6,3,3],[1,1,2,1,1]]. La somme des coefficients vaut 1 : c'est un passe-bas de lissage."
+    },
+    {
+      "id": "73",
+      "kind": "redaction",
+      "front": "Détailler une classification des différents types d'images numériques selon leurs sources ou leurs contenus.",
+      "back": "(1) Selon la source : images acquises par capteur (photographie, caméra, scanner, radar, satellite, imagerie médicale comme IRM ou échographie), images de synthèse générées par ordinateur, images issues de simulations, images composites. (2) Selon le contenu : images binaires, en niveaux de gris, en couleurs (RVB ou indexées), multispectrales ou hyperspectrales, images de profondeur, images de documents."
+    },
+    {
+      "id": "74",
+      "kind": "notion",
+      "front": "Restauration d'intensité : quel est son but ?",
+      "back": "corriger luminosité et bruit"
+    },
+    {
+      "id": "75",
+      "kind": "notion",
+      "front": "Restauration de géométrie : quel est son but ?",
+      "back": "corriger les déformations géométriques"
+    },
+    {
+      "id": "76",
+      "kind": "notion",
+      "front": "Détection de coins : quel résultat produit-elle ?",
+      "back": "points d'intérêt ; intersections de contours"
+    },
+    {
+      "id": "77",
+      "kind": "notion",
+      "front": "Réalité augmentée : de quoi s'agit-il ?",
+      "back": "superposition d'objets virtuels au réel"
+    },
+    {
+      "id": "78",
+      "kind": "notion",
+      "front": "Pour un filtre de grande taille, comment réduire le coût de la convolution ?",
+      "back": "passer dans le domaine fréquentiel ; transformée de Fourier"
+    },
+    {
+      "id": "79",
+      "kind": "notion",
+      "front": "Qu'est-ce que la réflectance d'un objet ?",
+      "back": "fraction de lumière réfléchie"
+    },
+    {
+      "id": "80",
+      "kind": "notion",
+      "front": "Qu'est-ce que la chrominance d'un pixel ?",
+      "back": "composantes couleur sans luminance"
+    }
+  ]
+}

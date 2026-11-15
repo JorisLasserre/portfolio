@@ -94,8 +94,7 @@ export function validateDeck(raw) {
 
   return {
     deck: {
-      id: `custom-${Date.now()}`,
-      title,
+      id: `custom-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`, title,
       frontLabel: typeof raw.frontLabel === 'string' && raw.frontLabel.trim() ? raw.frontLabel.trim() : 'Recto',
       backLabel: typeof raw.backLabel === 'string' && raw.backLabel.trim() ? raw.backLabel.trim() : 'Verso',
       phaseSize: Number.isFinite(size) && size >= 2 ? size : 10,

@@ -23,6 +23,12 @@ export function phaseProgress(phase, levels) {
   if (!phase.cards.length) return 0;
   return phase.cards.reduce((s, c) => s + lv(levels, c), 0) / (phase.cards.length * 2);
 }
+// L'ordre des cartes est mélangé tant que le deck n'a pas été commencé.
+// Une fois commencé, on garde l'ordre de la progression sauvegardée.
+export function orderedCards(deck, levels, rng = Math.random) {
+  const started = Object.keys(levels).length > 0;
+  return started ? deck.cards : shuffle(deck.cards, rng);
+}
 
 export function deckProgress(deck, levels) {
   const total = deck.cards.length;
