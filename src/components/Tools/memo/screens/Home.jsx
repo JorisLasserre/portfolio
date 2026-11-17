@@ -1,4 +1,5 @@
 import { useRef, useState } from 'react';
+import promptUrl from '../Prompt.md?url';
 import { validateDeck, getPhases } from '../core/deck.js';
 import { deckProgress } from '../core/learnEngine.js';
 import { loadProgress, resetProgress } from '../core/storage.js';
@@ -33,7 +34,10 @@ function ImportPanel({ onImport }) {
     <section className={panel}>
       <h3 className="text-lg font-semibold">Importer un deck</h3>
       <p className={muted}>
-        Fichier <code className="rounded bg-slate-100 px-1 py-0.5 text-[0.9em]">.json</code> généré avec le prompt fourni (voir <code className="rounded bg-slate-100 px-1 py-0.5 text-[0.9em]">PROMPT_GENERATION_DECK.md</code>).
+        Fichier <code className="rounded bg-slate-100 px-1 py-0.5 text-[0.9em]">.json</code> généré avec le prompt fourni (voir{' '}
+        <a href={promptUrl} download="Prompt.md" className="font-medium text-indigo-600 underline hover:text-indigo-800">
+          Prompt.md
+        </a>).
       </p>
       <input ref={inputRef} type="file" accept=".json,application/json" onChange={handleFile} hidden />
       <div className={actions}>
